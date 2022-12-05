@@ -33,4 +33,11 @@
 
 
 
+# FETCHING DATA SOURCES
+- Crypto Wizards
+- Financal Model Prep
+- Quandl
+
+
+
 
