@@ -1,28 +1,36 @@
-# Anaconda on linux 
-- make sure to go into /anaconda dir inside of /root
-    - Activate the venv
-        - source ~/anaconda3/bin/activate
-
-
-
 # STEPS
 - activate anaconda                (~/anaconda)
 - create enviroment                (ML-finance)
 - activate that enviroment         (ML-finance)
 - install anaconda dependencies    (conda)
 - install pip dependencies         (pip)
+- fetch data                       (requests)
+- ...                              (...)
+- ...                              (...)
+- ...                              (...)
+- ...                              (...)
+
+
+
+
+## Anaconda on linux 
+- make sure to go into /anaconda dir inside of /root
+    - Activate the venv
+        - source ~/anaconda3/bin/activate
 
 
 
 
 
-### Create Anaconda Enviroment
-- conda create -n ML-finance python=3.9
+
+## Create Anaconda Enviroment
+- conda create -n ENV_NAME python=PYTHON_VERSION
+    - ex: conda create -n ML-finance python=3.9
 
 
 
 
-### Activate Anaconda Enviroment
+## Activate Anaconda Enviroment
 - conda activate ENV_NAME
 
 
@@ -33,7 +41,7 @@
 
 
 
-# FETCHING DATA SOURCES
+#### FETCHING DATA SOURCES
 - Crypto Wizards
 - Financal Model Prep
 - Quandl
