@@ -13,30 +13,27 @@
 
 
 
-## Anaconda on linux 
+#### Anaconda on linux 
 - make sure to go into /anaconda dir inside of /root
     - Activate the venv
         - source ~/anaconda3/bin/activate
 
 
 
-
-
-
-## Create Anaconda Enviroment
+#### Create Anaconda Enviroment
 - conda create -n ENV_NAME python=PYTHON_VERSION
     - ex: conda create -n ML-finance python=3.9
 
 
 
 
-## Activate Anaconda Enviroment
+#### Activate Anaconda Enviroment
 - conda activate ENV_NAME
 
 
 
 
-### Activate Jupyter Notebook
+#### Activate Jupyter Notebook
 - jupyter notebook --allow-root
 
 
