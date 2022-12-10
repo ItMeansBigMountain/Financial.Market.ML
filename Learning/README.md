@@ -46,3 +46,26 @@
 
 
 
+
+
+
+#### PYTHON LIST vs. NUMPY ARRAY vs. PYTORCH TENSOR
+- Lists: regular serialized python collection datasets
+    - Most common data structure in python
+
+- Numpy Arrays: Low latency mutable collections
+    - Common with calculative applications that rely on effeciant number crunching
+
+- Pytorch Tensors: Collections that can utilize the GPU and the TPU
+    - utilized with machine learning | Neural Networks
+
+
+
+
+
+
+## Class Inheritance
+- nn.Module
+    - Neural Network Class interface that will extend the functionality of class objects that we define
+        - ex: Class StockTrader(nn.Module)
+
