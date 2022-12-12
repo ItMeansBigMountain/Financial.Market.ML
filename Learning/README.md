@@ -69,3 +69,9 @@
     - Neural Network Class interface that will extend the functionality of class objects that we define
         - ex: Class StockTrader(nn.Module)
 
+
+
+
+
+# Pandas
+- Like having excel as a python library
