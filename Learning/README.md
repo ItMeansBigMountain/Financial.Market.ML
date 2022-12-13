@@ -26,6 +26,11 @@
 
 
 
+#### Create env with file 
+- conda create --name <env> --file <filename>
+
+
+
 
 #### Activate Anaconda Enviroment
 - conda activate ENV_NAME
