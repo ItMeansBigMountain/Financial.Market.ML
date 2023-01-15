@@ -27,6 +27,10 @@
 - Datetime
 - Mixed
 
+- We would like to transform all text columns into numerical representations
+    - Label Encoding : Increments columns [i++ 1,2,3,4,5,6,7,8,9...]
+    - 
+
 
 
 ## Model Selection & Training
@@ -114,3 +118,19 @@ false negative is an outcome where the model incorrectly predicts the negative c
 - deploy model to the cloud
 
 
+
+
+
+
+# Interperating Data
+- you dont want column names to be text
+- the reason why is that machine learning uses numbers to find patters and cannot distinguish from strings like it can with integers/floats
+
+
+
+
+
+
+# OneHot Encoding
+- taking text columns and turning them into numbers
+    - the computer needs all titles as numbers to find relations
