@@ -50,7 +50,7 @@ Convert  all datapoints into numbers
 
 
 ### Data Relation to Algo Type
-- quatative date --> regression
+- quatative data --> regression
 - catagorized data  --> classification
 - probability data  --> clustering
 - patterns data ---> dimentionality reduction
