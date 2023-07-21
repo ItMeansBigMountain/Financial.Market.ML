@@ -2,9 +2,9 @@
 - activate anaconda                (~/anaconda)
 - create enviroment                (ML-finance)
 - activate that enviroment         (ML-finance)
-- install anaconda dependencies    (conda)
-- install pip dependencies         (pip)
-- fetch data                       (requests)
+- install anaconda dependencies    (conda install ...)
+- install pip dependencies         (pip install ...)
+- fetch data                       (requests.get() or Yfinance.py)
 - ...                              (...)
 - ...                              (...)
 - ...                              (...)
@@ -47,6 +47,7 @@
 - Crypto Wizards
 - Financal Model Prep
 - Quandl
+- Y-Finance
 
 
 
@@ -54,7 +55,7 @@
 
 
 
-#### PYTHON LIST vs. NUMPY ARRAY vs. PYTORCH TENSOR
+#### Collection Data Types
 - Lists: regular serialized python collection datasets
     - Most common data structure in python
 
@@ -69,7 +70,7 @@
 
 
 
-## Class Inheritance
+## Class Inheritance for Neural Networks
 - nn.Module
     - Neural Network Class interface that will extend the functionality of class objects that we define
         - ex: Class StockTrader(nn.Module)
