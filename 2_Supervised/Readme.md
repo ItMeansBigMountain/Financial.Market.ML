@@ -19,43 +19,37 @@
 
 
 
-
 ## 1-Data-Preprocessing.ipynb Overview
 
 ### Sections in the Notebook
+
 1. **Data extraction & Returns Overview**
 2. **Feature Engineering - Feature Expansion**
 3. **Indicators**
 4. **Time Intervals**
 5. **More on Feature Engineering**
 
+---
+
 ### Key Notes
-  - **Usage in AI**: Establishes the dataset that the model will be trained on.
-  - **Value**: The foundation of any machine learning model; without data, there's nothing to learn from.
-  - **Benefit**: Allows you to understand the data you're working with, including its structure and what kind of preprocessing it may require.
 
-#### 2. Feature Engineering - Feature Expansion
-  - **Usage in AI**: Creates new features from existing ones, potentially revealing more useful patterns for the model.
-  - **Value**: Enhances the model's understanding of the data.
-  - **Benefit**: Can improve model performance by adding relevant features that capture more aspects of the data.
+| Section                         | Usage in AI                                        | Value                                             | Benefit                                                                                     |
+|---------------------------------|----------------------------------------------------|---------------------------------------------------|----------------------------------------------------------------------------------------------|
+| Data extraction & Returns Overview | Establishes the dataset                            | Foundation for any ML model                       | Understands data structure and preprocessing needs                                           |
+| Feature Engineering - Feature Expansion | Creates new features                            | Enhances data understanding                        | Improves model performance                                                                   |
+| Indicators                        | Statistical measures as features                   | Summarized data                                   | Increases model interpretability and potential accuracy                                     |
+| Time Intervals                    | Handles time-series data                           | Captures temporal patterns                         | Critical for time-series tasks and improves model performance for tasks with a temporal aspect |
+| More on Feature Engineering       | Additional techniques to transform or create features | Further dataset improvement                     | Reveals more underlying patterns that can be leveraged by the model                           |
 
-#### 3. Indicators
-  - **Usage in AI**: Statistical measures that can be used as features in the model.
-  - **Value**: Provides summarized data that could be more informative than raw data.
-  - **Benefit**: Can make the model more interpretable and potentially improve accuracy.
+```python
+# Code Snippet for Data Importing
+import pandas as pd
+data = pd.read_csv('data.csv')
 
-#### 4. Time Intervals
-  - **Usage in AI**: Handles time-series data, which often requires special preprocessing steps.
-  - **Value**: Allows the model to capture temporal patterns.
-  - **Benefit**: Critical for time-series forecasting tasks; can also improve model performance for non-time-series tasks that still have a temporal aspect.
+# Code Snippet for Feature Engineering
+data['new_feature'] = data['existing_feature'] * 2
+```
 
-#### 5. More on Feature Engineering
-  - **Usage in AI**: Additional techniques to transform or create features.
-  - **Value**: Further improves the dataset for model training.
-  - **Benefit**: More chances to reveal underlying patterns in the data that can be leveraged by the model.
-
-### Utilization Post-Training/Testing
-- The preprocessing steps are essential to reapply to any new data that you want the trained model to make predictions on. Failing to do so could result in inaccurate and unreliable predictions.
 
 
 
@@ -67,8 +61,10 @@
 
 
 
-## 2-XG-Boost-Feature-Selection.ipynb Overview.
+## 2-XG-Boost-Feature-Selection.ipynb Overview
+
 ### Sections in the Notebook
+
 1. **Feature Selection**
 2. **Import Preprocessed Data**
 3. **Add Prediction Target**
@@ -76,34 +72,28 @@
 5. **Build Initial Model**
    - Find the useful features
 
+---
+
 ### Key Notes
-#### 1. Feature Selection
-  - **Usage in AI**: Determines which features are most relevant for the model's prediction task.
-  - **Value**: Increases efficiency and potentially improves model performance.
-  - **Benefit**: Reduces overfitting by ignoring irrelevant features and speeds up training.
 
-#### 2. Import Preprocessed Data
-  - **Usage in AI**: Loads the data that was prepared in the previous notebook.
-  - **Value**: Ensures that the model is trained on clean, well-structured data.
-  - **Benefit**: Streamlines the machine learning pipeline by reusing preprocessed data.
+| Section                  | Usage in AI                                    | Value                                        | Benefit                                                         |
+|--------------------------|------------------------------------------------|----------------------------------------------|-----------------------------------------------------------------|
+| Feature Selection        | Determines relevant features                   | Increases efficiency                         | Reduces overfitting, speeds up training                         |
+| Import Preprocessed Data | Uses data prepared in the previous notebook    | Ensures clean, well-structured training data  | Streamlines the ML pipeline                                     |
+| Add Prediction Target    | Specifies the prediction target                | Defines the model's objective                | Allows for focused model training                               |
+| Train-Test Split         | Divides data into training and test sets       | Enables model validation                     | Critical for performance evaluation                             |
+| Build Initial Model      | Creates a baseline model                       | Serves as a starting point for optimization  | Guides future feature selection efforts                          |
 
-#### 3. Add Prediction Target
-  - **Usage in AI**: Specifies what the model is trying to predict.
-  - **Value**: Defines the objective for the machine learning model.
-  - **Benefit**: Makes the problem clearly defined, allowing for focused model training.
+```python
+# Code Snippet for Feature Selection with XGBoost
+from xgboost import XGBClassifier
+model = XGBClassifier()
+model.fit(X_train, y_train)
 
-#### 4. Train-Test Split
-  - **Usage in AI**: Divides the dataset into training and test sets.
-  - **Value**: Enables the model to be validated on unseen data.
-  - **Benefit**: Critical for evaluating the model's performance and generalizability.
-
-#### 5. Build Initial Model
-  - **Usage in AI**: Creates a baseline model to identify useful features.
-  - **Value**: Serves as a starting point for further model tuning and optimization.
-  - **Benefit**: Provides initial insights into which features are most important, guiding future feature selection efforts.
-
-### Utilization Post-Training/Testing
-- The feature selection process should be consistent when deploying
+# Code Snippet for Train-Test Split
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+```
 
 
 
@@ -117,7 +107,7 @@
 
 ## 3- XGBOOST-Binary-Classification-Model-Evaluation.ipynb Overview
 
-TBD
+`TBD`
 
 
 
