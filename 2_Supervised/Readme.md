@@ -1,6 +1,3 @@
-[TOC]
-
-
 ## TL;DRs for Each Notebook and the Bigger Picture
 
 ### 1-Data-Preprocessing.ipynb
