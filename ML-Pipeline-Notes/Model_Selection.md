@@ -1,8 +1,9 @@
+
 # Model Selection for SRE Predictive Analysis
 
 ## Project Goal
 
-The goal is to develop a machine learning model that is technically capable of automating the predictive analysis tasks commonly handled by an SRE. 
+The goal is to develop a machine learning model capable of automating the predictive analysis tasks commonly handled by an SRE.
 
 ## Table of Contents
 
@@ -13,7 +14,7 @@ The goal is to develop a machine learning model that is technically capable of a
     - [Unsupervised Models](#unsupervised-models)
     - [Time Series Models](#time-series-models)
     - [Hidden Markov Models](#hidden-markov-models)
-4. [Evaluation Metrics](#evaluation-metrics)
+4. [Model Evaluation](#model-evaluation)
 5. [SRE Relevant Metrics](#sre-relevant-metrics)
 6. [Tools and Technologies](#tools-and-technologies)
 
@@ -21,11 +22,15 @@ The goal is to develop a machine learning model that is technically capable of a
 
 ## Objective
 
-To choose machine learning models that can automate the technical analysis usually performed by an SRE.
+To identify and select machine learning models that can effectively automate the technical analysis usually performed by an SRE.
 
 ## Implementation Steps
 
-- Evaluate different types of models like supervised, unsupervised, and time-series models
+1. **Preliminary Research**: Understand the types of models that have been successfully applied to similar problems.
+2. **Model Shortlisting**: Shortlist models based on the problem requirements and constraints.
+3. **Initial Testing**: Run initial tests to evaluate the performance of shortlisted models.
+4. **Parameter Tuning**: Fine-tune the parameters of the selected models for optimal performance.
+5. **Final Selection**: Pick the model that performs best on the validation set.
 
 ## Types of Models
 
@@ -44,7 +49,7 @@ To choose machine learning models that can automate the technical analysis usual
 
 #### How It Helps With SRE Metrics
 
-- Capable of predicting incidents based on metrics like latency and error rates, which are essential for maintaining SLOs.
+- Capable of predicting incidents based on metrics like latency and error rates.
 
 ### Unsupervised Models
 
@@ -55,12 +60,12 @@ To choose machine learning models that can automate the technical analysis usual
 
 #### Special Features
 
-- K-means is good for spherical clusters
+- K-means works well for spherical clusters
 - DBSCAN can find arbitrarily shaped clusters
 
 #### How It Helps With SRE Metrics
 
-- Useful for anomaly detection in system metrics like error rate and saturation, enabling preemptive action.
+- Useful for anomaly detection in system metrics.
 
 ### Time Series Models
 
@@ -72,11 +77,11 @@ To choose machine learning models that can automate the technical analysis usual
 #### Special Features
 
 - ARIMA captures linear relationships
-- LSTM can capture long-term dependencies in data
+- LSTM can capture long-term dependencies
 
 #### How It Helps With SRE Metrics
 
-- Effective for predicting time-based metrics like traffic spikes, allowing for better resource allocation.
+- Effective for predicting time-based metrics like traffic spikes.
 
 ### Hidden Markov Models
 
@@ -85,23 +90,56 @@ To choose machine learning models that can automate the technical analysis usual
 - Excellent for systems that can be modeled as Markov processes
 - Captures transitions between states
 
+
+
+
+### Neural Network Models
+
+#### Examples
+
+- Feedforward Neural Networks (FNN)
+- Convolutional Neural Networks (CNN)
+- Recurrent Neural Networks (RNN)
+
+#### Special Features
+
+- Capable of capturing complex nonlinear relationships
+- Highly customizable architecture
+
 #### How It Helps With SRE Metrics
 
-- Capable of predicting sequence-based changes in system states, useful for metrics like uptime and saturation.
+- Can model intricate systems with multiple interacting variables
+- Effective for tasks like anomaly detection and time-series forecasting
 
-## Evaluation Metrics
+#### Considerations
 
-Different models will require different evaluation metrics for optimal performance. Choose the metric that best suits the model and the problem you are trying to solve.
+- Requires a large amount of data for training
+- Computationally expensive, may require specialized hardware like GPUs
+
+
+
+
+
+
+#### How It Helps With SRE Metrics
+
+- Useful for predicting sequence-based changes in system states.
+
+## Model Evaluation
+
+- **Evaluation Metrics**: Different models will require different metrics for optimal performance. Choose the one that best suits the model and the problem.
+- **Cross-Validation**: Use cross-validation techniques to get a more generalized performance metric.
 
 ## SRE Relevant Metrics
 
-- **Latency**: The time it takes to service a request.
-- **Traffic**: The number of requests hitting the service.
-- **Error Rate**: The rate of failed requests over total requests.
-- **Saturation**: How "full" the service is.
-- **Uptime**: The amount of time a service is available.
+- **Latency**: Time to service a request
+- **Traffic**: Number of requests
+- **Error Rate**: Rate of failed requests
+- **Saturation**: System load
+- **Uptime**: Service availability
 
 ## Tools and Technologies
 
 - scikit-learn
 - TensorFlow
+
