@@ -18,7 +18,15 @@
     - API 
     - Spread Sheet
  
+    **today divided by yesterdy**
+    ```
+    df['Asset1'] / df["Asset1"].shift(1)
+    ```
 
+    **today subtracted by tomorrow**
+    ```
+    df['Asset1'] - df["Asset1"].shift(-1)
+    ```
 
 
 ## Feature Engineering
